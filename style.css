@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.score-display {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px); /* 9 kolom dengan lebar 40px */
+    grid-template-rows: repeat(9, 40px);   /* 9 baris dengan tinggi 40px */
+    border: 2px solid #333;
+    width: 360px; /* 9 * 40px */
+    height: 360px; /* 9 * 40px */
+    margin: 0 auto 20px;
+}
+
+.grid-cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Pastikan border termasuk dalam ukuran */
+}
+
+/* Warna untuk blok */
+.block-color-1 { background-color: #FF5733; } /* Merah */
+.block-color-2 { background-color: #33FF57; } /* Hijau */
+.block-color-3 { background-color: #3357FF; } /* Biru */
+.block-color-4 { background-color: #FFBD33; } /* Oranye */
+.block-color-5 { background-color: #BB33FF; } /* Ungu */
+
+.available-blocks {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    min-height: 100px; /* Memberikan ruang agar blok terlihat */
+}
+
+.block-preview {
+    border: 1px solid #555;
+    padding: 5px;
+    margin: 5px;
+    cursor: grab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.block-shape {
+    display: grid;
+    grid-template-columns: repeat(3, 20px); /* Maksimal blok 3x3 */
+    grid-template-rows: repeat(3, 20px);
+    gap: 1px;
+    margin: 5px 0;
+}
+
+.block-unit {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.game-over-message {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffe0e0;
+    border: 1px solid #ff0000;
+    border-radius: 8px;
+}
+
+.game-over-message h2 {
+    color: #ff0000;
+}
+
+.game-over-message button {
+    background-color: #dc3545;
+}
+.game-over-message button:hover {
+    background-color: #c82333;
+}
